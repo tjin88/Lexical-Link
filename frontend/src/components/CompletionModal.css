@@ -1,0 +1,23 @@
+.completion-display {
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.congrats-animation {
+    font-size: 24px;
+    color: green;
+    animation: celebrate 1s linear infinite;
+}
+
+@keyframes celebrate {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.game-stats p {
+    font-size: 16px;
+    color: #333;
+}

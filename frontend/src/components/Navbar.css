@@ -1,0 +1,32 @@
+.navbar {
+    width: calc(100vw - 40px);
+    background-color: #005f73;
+    color: #ffffff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.navbar button {
+    background-color: #0a9396;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar button:hover {
+    background-color: #94d2bd;
+}

@@ -1,0 +1,47 @@
+[debug] [2024-05-05T21:25:07.090Z] ----------------------------------------------------------------------
+[debug] [2024-05-05T21:25:07.094Z] Command:       /Users/tristanjin/.nvm/versions/node/v19.1.0/bin/node /Users/tristanjin/.nvm/versions/node/v19.1.0/bin/firebase init
+[debug] [2024-05-05T21:25:07.095Z] CLI Version:   12.5.4
+[debug] [2024-05-05T21:25:07.095Z] Platform:      darwin
+[debug] [2024-05-05T21:25:07.096Z] Node Version:  v19.1.0
+[debug] [2024-05-05T21:25:07.096Z] Time:          Sun May 05 2024 17:25:07 GMT-0400 (Eastern Daylight Time)
+[debug] [2024-05-05T21:25:07.096Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-05-05T21:25:07.100Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2024-05-05T21:25:07.164Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-05-05T21:25:07.164Z] > authorizing via signed-in user (tjin368@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/tristanjin/word-weaver/frontend
+
+[debug] [2024-05-05T21:25:07.429Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2024-05-05T21:25:07.430Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2024-05-05T21:25:28.163Z] > refreshing access token with scopes: []
+[debug] [2024-05-05T21:25:28.164Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-05-05T21:25:28.165Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-05-05T21:25:28.362Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-05-05T21:25:28.363Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-05-05T21:25:28.413Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2024-05-05T21:25:28.413Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"word-weaver","name":"word-weaver"}
+[debug] [2024-05-05T21:25:28.893Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 409
+[debug] [2024-05-05T21:25:28.893Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":409,"message":"Requested entity already exists","status":"ALREADY_EXISTS"}}
+[debug] [2024-05-05T21:25:28.896Z] FirebaseError: HTTP Error: 409, Requested entity already exists
+    at responseToError (/Users/tristanjin/.nvm/versions/node/v19.1.0/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/Users/tristanjin/.nvm/versions/node/v19.1.0/lib/node_modules/firebase-tools/lib/apiv2.js:285:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to create project because there is already a project with ID word-weaver. Please try again with a unique project ID.
